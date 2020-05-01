@@ -1,0 +1,22 @@
+/*General*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'AudioWide';
+    src: url(../fonts/Audiowide-Regular.ttf);
+}
+
+.AudioWide {
+    font-family: 'AudioWide';
+}
+
+.Logo, img {
+    width: 100px;
+}
+
+.TitleLogo {
+    font-size: 50px;
+}
