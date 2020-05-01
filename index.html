@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/nouislider.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <title>Maquina de Turing</title>
 </head>
 <body>
-    
+
+    <div class="container">
+        <div class="container row py-5">
+            <div class="col-3 align-self-center Logo">
+                <img src="imgs/Logo-Unimag.png" alt="Logo-Unimag">
+            </div>
+            <div class="col align-self-center">
+                <h1 class="AudioWide TitleLogo">MAQUINA DE TURING</h1>
+            </div>
+        </div>
+        
+        <div class="card text-center">
+            <div class="card-header">
+              Maquina
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Palabra" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" type="button" id="button-addon2">Cargar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-play"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-pause"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-stop"></i></button>
+                        </div>
+                    </div>
+                    <div class="col pt-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="h5">Speed:</p>
+                            </div>
+                           <div class="col">
+                               <div id="speed-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-light py-5 text-center">
+        <div class="container border-top py-3">
+            <p class="m-0 text-muted">
+                Copyright &copy;2020 All rights reserved
+            </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js.map"></script>
+    <script src="js/all.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/nouislider.js"></script>
+    <script>
+        var slider = document.getElementById('speed-bar');
+
+            noUiSlider.create(slider, {
+                start: 50,
+                connect: [true,false],
+                orientation: "horizontal",
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+        });
+    </script>
 </body>
 </html>
