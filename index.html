@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/nouislider.css">
     <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/horizontal.css">
     <link rel="stylesheet" href="css/main.css">
 
     <title>Maquina de Turing</title>
@@ -30,9 +31,21 @@
               Maquina
             </div>
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="wrap">        
+                    <div class="frame" id="forcecentered">
+                        <ul class="clearfix">
+                            <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+                            <li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+                            <li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li>
+                            <li>28</li><li>29</li>
+                        </ul>
+                    </div>
+        
+                    <div class="controls center">
+                        <button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
+                        <button class="btn next">next <i class="icon-chevron-right"></i></button>
+                    </div>
+                </div>
             </div>
             <div class="card-footer text-muted">
                 <div class="row">
@@ -78,12 +91,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js.map"></script>
     <script src="js/all.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/nouislider.js"></script>
+    <script src="js/vendor/plugins.js"></script>
+	<script src="js/sly/sly.min.js"></script>
+    <script src="js/horizontal.js"></script>
+    
     <script>
         var slider = document.getElementById('speed-bar');
 
