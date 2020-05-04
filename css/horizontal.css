@@ -36,26 +36,8 @@ body { background: #e8e8e8; }
 	color: #fff;
 	background: #8401fb;
 }
-
-/* Scrollbar */
-.scrollbar {
-	margin: 0 0 1em 0;
-	height: 2px;
-	background: #ccc;
-	line-height: 0;
-}
-.scrollbar .handle {
-	width: 100px;
-	height: 100%;
-	background: #292a33;
-	cursor: pointer;
-}
-.scrollbar .handle .mousearea {
-	position: absolute;
-	top: -9px;
-	left: 0;
-	width: 100%;
-	height: 20px;
+li:empty {
+    background: #333;
 }
 
 /* Pages */
