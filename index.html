@@ -41,16 +41,42 @@
                 <div class="wrap">        
                     <div class="frame" id="forcecentered">
                         <ul class="clearfix">
-                            <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
-                            <li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
-                            <li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li>
-                            <li>28</li><li>29</li>
+                            <li class="item">B</li>
+                            <li class="item">1</li>
+                            <li class="item">2</li>
+                            <li class="item">3</li>
+                            <li class="item">4</li>
+                            <li class="item"></li>
+                            <li class="item">6</li>
+                            <li class="item">7</li>
+                            <li class="item">8</li>
+                            <li class="item">9</li>
+                            <li class="item">10</li>
+                            <li class="item">11</li>
+                            <li class="item">12</li>
+                            <li class="item">13</li>
+                            <li class="item">14</li>
+                            <li class="item">15</li>
+                            <li class="item">16</li>
+                            <li class="item">17</li>
+                            <li class="item">18</li>
+                            <li class="item">19</li>
+                            <li class="item">20</li>
+                            <li class="item">21</li>
+                            <li class="item">22</li>
+                            <li class="item">23</li>
+                            <li class="item">24</li>
+                            <li class="item">25</li>
+                            <li class="item">26</li>
+                            <li class="item">27</li>
+                            <li class="item">28</li>
+                            <li class="item" id="ultimo">29</li>
                         </ul>
                     </div>
         
                     <div class="controls center">
                         <button class="btn prev"> prev </button>
-                        <button class="btn next">next <i class="icon-chevron-right"></i></button>
+                        <button class="btn next">next </button>
                     </div>
                 </div>
             </div>
@@ -58,17 +84,17 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Palabra" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input id="Word" type="text" class="form-control" placeholder="Palabra" aria-label="Word" aria-describedby="button-addon2">
                             <div class="input-group-append">
-                              <button class="btn btn-secondary" type="button" id="button-addon2">Cargar</button>
+                              <button class="btn btn-secondary" type="button" id="Load" onclick="loadword();">Cargar</button>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-play"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-pause"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-stop"></i></button>
+                        <div class="btn-group controls" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="btn btn-secondary pause"><i class="fas fa-pause"></i></button>
+                            <button type="button" class="btn btn-secondary stop"><i class="fas fa-stop"></i></button>
                         </div>
                     </div>
                     <div class="col pt-2">
@@ -95,6 +121,21 @@
         </div>
     </footer>
 
+    <script>
+        function loadword(){
+            var word = document.getElementById('Word').value;
+            if(word != ""){
+                var items = document.getElementsByClassName('item');
+
+                for(i=0; i<word.length; i++){
+                    items[i+5].innerHTML = word[i];
+                }
+            }
+            else{
+                alert("No se ingresó ninguna palabra");
+            }
+        }
+    </script>
     <!--SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

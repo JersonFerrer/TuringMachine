@@ -7,6 +7,7 @@ jQuery(function($){
 	(function () {
 		var $frame = $('#forcecentered');
 		var $wrap  = $frame.parent();
+		var $controls = $('.controls')
 
 		// Call Sly on frame
 		$frame.sly({
@@ -30,7 +31,8 @@ jQuery(function($){
 
 			// Buttons
 			prev: $wrap.find('.prev'),
-			next: $wrap.find('.next')
+			next: $wrap.find('.next'),
+			next: $controls.find('.play')
 		});
 	}());
 });
