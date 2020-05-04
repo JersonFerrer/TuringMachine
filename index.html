@@ -38,7 +38,11 @@
               Maquina
             </div>
             <div class="card-body">
-                <div class="wrap">        
+                <div class="wrap">
+                    <div class="controls center m-0">
+                        <div class="flecha"> <i class="fas fa-caret-down mt-5"></i></div>
+                    </div>
+
                     <div class="frame" id="forcecentered">
                         <ul class="clearfix">
                             <li class="item">B</li>
@@ -46,7 +50,7 @@
                             <li class="item">2</li>
                             <li class="item">3</li>
                             <li class="item">4</li>
-                            <li class="item"></li>
+                            <li class="item">5</li>
                             <li class="item">6</li>
                             <li class="item">7</li>
                             <li class="item">8</li>
@@ -73,10 +77,9 @@
                             <li class="item" id="ultimo">29</li>
                         </ul>
                     </div>
-        
-                    <div class="controls center">
-                        <button class="btn prev"> prev </button>
-                        <button class="btn next">next </button>
+
+                    <div class="controls center m-0">
+                        <div class="flecha"> <i class="fas fa-caret-up mb-5"></i></div>
                     </div>
                 </div>
             </div>
@@ -91,7 +94,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="btn-group controls" role="group" aria-label="Basic example">
+                        <div class="btn-group control-buttons" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-secondary play"><i class="fas fa-play"></i></button>
                             <button type="button" class="btn btn-secondary pause"><i class="fas fa-pause"></i></button>
                             <button type="button" class="btn btn-secondary stop"><i class="fas fa-stop"></i></button>
@@ -128,7 +131,7 @@
                 var items = document.getElementsByClassName('item');
 
                 for(i=0; i<word.length; i++){
-                    items[i+5].innerHTML = word[i];
+                    items[i+11].innerHTML = word[i];
                 }
             }
             else{

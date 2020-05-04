@@ -20,3 +20,9 @@
 .TitleLogo {
     font-size: 50px;
 }
+.card-body {
+    padding: 0;
+}
+.wrap {
+    margin: 0;
+}

@@ -7,7 +7,7 @@ jQuery(function($){
 	(function () {
 		var $frame = $('#forcecentered');
 		var $wrap  = $frame.parent();
-		var $controls = $('.controls')
+		var $controls = $('.control-buttons')
 
 		// Call Sly on frame
 		$frame.sly({
@@ -19,7 +19,7 @@ jQuery(function($){
 			mouseDragging: 1,
 			touchDragging: 1,
 			releaseSwing: 1,
-			startAt: 5,
+			startAt: 11,
 			scrollBar: $wrap.find('.scrollbar'),
 			scrollBy: 1,
 			speed: 300,
