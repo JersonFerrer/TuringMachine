@@ -13,15 +13,16 @@ body { background: #e8e8e8; }
 	line-height: 50px;
 	overflow: hidden;
 }
-.frame ul {
+.scroll {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	height: 50px;
 	font-size: 25px;
+	overflow: hidden;
 }
 
-.frame ul li {
+.item {
 	float: left;
 	width: 50px;
 	height: 50px;
@@ -31,12 +32,13 @@ body { background: #e8e8e8; }
 	color: #ddd;
 	text-align: center;
 	cursor: pointer;
+	position:relative;
 }
-.frame ul li.active {
+.item.active {
 	color: #fff;
 	background: #8401fb;
 }
-li:empty {
+.item:empty {
     background: #333;
 }
 
