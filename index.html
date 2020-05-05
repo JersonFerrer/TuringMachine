@@ -106,9 +106,9 @@
                     </div>
                     <div class="col">
                         <div class="btn-group control-buttons" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="btn btn-secondary play" onclick="converter();"><i class="fas fa-play"></i></button>
                             <button type="button" class="btn btn-secondary pause"><i class="fas fa-pause"></i></button>
-                            <button type="button" class="btn btn-secondary stop"><i class="fas fa-stop"></i></button>
+                            <button type="button" class="btn btn-secondary stop" onclick="refresh();"><i class="fas fa-stop"></i></button>
                         </div>
                     </div>
                     <div class="col pt-2">
@@ -136,6 +136,43 @@
     </footer>
 
     <script>
+
+        var states = {
+            "states":[
+                {
+                    "a":{
+                        "write":"a",
+                        "move_tape":"R",
+                        "next_state":"0"
+                    },
+                    "b":{
+                        "write":"a",
+                        "move_tape":"R",
+                        "next_state":"0"
+                    },
+                    "blank":{
+                        "write":"-",
+                        "move_tape":"L",
+                        "next_state":"1"
+                    }
+                },
+                {
+                    "a":{
+                        "write":"a",
+                        "move_tape":"L",
+                        "next_state":"1"
+                    } 
+                },
+                {
+                    "blank":{
+                        "write":"-",
+                        "move_tape":"L",
+                        "next_state":"3"
+                    }
+                }
+            ]
+        }
+
         function loadword(){
             var word = document.getElementById('Word').value;
             if(word != ""){
@@ -147,8 +184,48 @@
             }
             else{
                 alert("No se ingresó ninguna palabra");
+                console.log(states.states[0].blank);
             }
         }
+
+        function refresh(){
+            var $frame = $('#forcecentered');
+            $frame.sly("stop");
+        }
+
+        const sleep = (milliseconds) => {
+            return new Promise(resolve => setTimeout(resolve, milliseconds))
+        }
+		function converter(){
+            var items = document.getElementsByClassName('item');
+            var $frame = $('#forcecentered');
+            var i=1;
+
+            /*if (items[i].textContent == "a" || items[i].textContent == "b") {
+                items[i].innerHTML = "";
+                sleep(1000).then(() => {
+                    items[i].innerHTML = "b";
+                })
+                sleep(2000).then(() => {
+                    $frame.sly("next");
+                    i++;
+                    console.log(i);
+                })
+            }*/
+            while(i <= 13){
+                if (items[i].textContent == "a" || items[i].textContent == "b") {
+                    items[i].innerHTML = "";
+                    items[i].innerHTML = "a";
+                    $frame.sly("next");
+                    i++;
+                    console.log(i);
+                }
+                if(items[i].textContent == " "){
+                    $frame.sly("left");
+                }
+            }
+        }
+        
     </script>
 
     <!--SCRIPTS-->

@@ -31,8 +31,7 @@ jQuery(function($){
 
 			// Buttons
 			prev: $wrap.find('.prev'),
-			next: $wrap.find('.next'),
-			next: $controls.find('.play')
+			next: $wrap.find('.next')
 		});
 	}());
 });
