@@ -2,7 +2,7 @@ var slider = document.getElementById('speed-bar');
 
 noUiSlider.create(slider, {
     start: 50,
-    connect: [true,false],
+    connect: [false,true],
     direction: 'rtl',
     orientation: "horizontal",
     range: {
