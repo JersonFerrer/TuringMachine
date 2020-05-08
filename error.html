@@ -18,9 +18,24 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/cfb5377838.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <title>Maquina de Turing</title>
 </head>
 <body>
+<script type="text/javascript">
+               Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'datos ingresados incorrectamente',
+                confirmButtonText: 'Aceptar',
+                //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
+              }).then((result) => {
+  if (result.value) {
+    window.location.href="index.html";
+  }
+})
+             
+    </script>
     <!--MAIN CONTAINER-->
     <div class="container">
         <!--HEADER CONTAINER-->

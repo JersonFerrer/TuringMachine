@@ -119,7 +119,7 @@ posicion=10;
                     }
 
     }else{
-        alert("No puedes jugar si está vacía la expresión");
+        window.location.href = "error.html";
     }
 }
 //velocidad de cambio
