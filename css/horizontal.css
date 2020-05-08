@@ -35,8 +35,8 @@ body { background: #e8e8e8; }
 	position:relative;
 }
 .item.active {
-	color: #fff;
-	background: #8401fb;
+	color: #8401fb;
+	background: #fff;
 }
 .item:empty {
     background: #333;
