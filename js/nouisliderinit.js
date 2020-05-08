@@ -3,9 +3,10 @@ var slider = document.getElementById('speed-bar');
 noUiSlider.create(slider, {
     start: 50,
     connect: [true,false],
+    direction: 'rtl',
     orientation: "horizontal",
     range: {
-        'min': 0,
-        'max': 100
+        'min': 100,
+        'max': 1000
     }
 });

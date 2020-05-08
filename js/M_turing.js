@@ -10,11 +10,10 @@ var estado = document.getElementById ('estado');
 let velocidad = 40;
 let mTop = 0;
 let mLeft =0;
-
 function run() {
-
+    
 var word= document.getElementById("Word").value;
-
+ 
 /*declaración de variables que operan en la máquina de turing y sus movimientos, n es el encargado de moverse
 dentro del String*/
 let n=1;
@@ -30,6 +29,7 @@ posicion=10;
   if(word != ""){
     word='z'+word+'z';
         while(estado!=3){
+
               //________Controla el estado Q1 y sus movimientos//
                     while( estado==1){
                         
@@ -123,17 +123,18 @@ posicion=10;
     }
 }
 //velocidad de cambio
-speed ="slow";
 
 function move_left(){
+    console.log(parseInt(slider.noUiSlider.get(), 10));
 
-    $( ".item" ).animate({ "left": "+=50px" },speed);
+    $( ".item" ).animate({ "left": "+=50px" },parseInt(slider.noUiSlider.get(), 10));
 
 }
 
 function move_right(){
-   
-    $( ".item" ).animate({ "left": "-=50px" },speed);
+    console.log(parseInt(slider.noUiSlider.get(), 10));
+
+    $( ".item" ).animate({ "left": "-=50px" },parseInt(slider.noUiSlider.get(), 10));
     
 }
 
