@@ -2,6 +2,12 @@
 function loadword(){
     
     var word = document.getElementById('Word').value;
+    
+    $("#estado").fadeIn(function() {
+        $(this).html("Estado: Ninguno ").fadeIn();
+      });
+
+    borrador();
 
     borrador();
     
