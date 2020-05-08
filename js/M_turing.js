@@ -67,7 +67,7 @@ function move_right(cont){
 function run() {
 
     var word= document.getElementById("Word").value;
-    
+
     /*declaración de variables que operan en la máquina de turing y sus movimientos, n es el encargado de moverse
     dentro del String*/
     let n=1;

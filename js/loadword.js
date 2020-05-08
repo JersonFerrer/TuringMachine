@@ -3,6 +3,10 @@ function loadword(){
     
     var word = document.getElementById('Word').value;
     
+    if(word.length > 11){
+      $("#cuadro"+100).after("<div class='item' id='cuadro"+101+"'></div>");
+    }
+
     $("#estado").fadeIn(function() {
         $(this).html("Estado: Ninguno ").fadeIn();
       });
