@@ -14,13 +14,13 @@ function loadword(){
                 cont++;
             }else{
                 borrador();
-                alert("Error en la digitación");
+                window.location.href = "error.html";
                 break;
             }
         }
     }
     else{
-        alert("ERROR No se ingresó ninguna palabra.intente de nuevo");
+        window.location.href = "error.html";
     }
 }
 function borrador() {
