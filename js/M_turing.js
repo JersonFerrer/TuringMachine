@@ -19,8 +19,6 @@ function move_left(cont) {
 
   $(".item").animate({ "left": "+=50px" }, parseInt(slider.noUiSlider.get(), 10));
 
-  //$( ".item" ).animate({ "left": "+=50px" },speed);
-
   $("#estado").animate({ "left": "+=0px" }, parseInt(slider.noUiSlider.get(), 10));
   $("#estado").fadeIn(function () {
     $(this).html("Estado: q_2 ").fadeIn();
@@ -100,7 +98,7 @@ function run() {
           cont++;
           right++;
           posicion++;
-
+          
         } else if (word.charAt(n) == "b") {
 
 
@@ -119,6 +117,10 @@ function run() {
         } else if (word.charAt(n) == "z") {
 
           word = word.replaceAt(n, "a");
+
+          $("#cuadro" + posicion).fadeIn(function () {
+            $(this).html("<h1></h1>").fadeIn();
+          });
 
           move_left(cont);
 
@@ -151,7 +153,7 @@ function run() {
           });
 
           left++;
-          posicion--
+          posicion--;
           move_left(cont);
           cont++;
 
