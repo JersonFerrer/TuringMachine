@@ -28,8 +28,10 @@ function loadword(){
                     //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
                   }).then((result) => {
                     if (result.value) {
-                      window.location.href = "index.html";
-                    }
+                      clearFileInput(document.getElementById("Word"));
+                      document.getElementById("Word").focus();
+                      Swal.close("salir");
+                      }
                   });
                 break;
             }
@@ -44,7 +46,8 @@ function loadword(){
             //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
           }).then((result) => {
             if (result.value) {
-              window.location.href = "index.html";
+                document.getElementById("Word").focus();
+              Swal.close("salir");
             }
           });
     }
@@ -55,4 +58,34 @@ function borrador() {
         items[i].innerHTML = "";
     }
 }
+function refresk(){
+  Swal
+  .fire({
+      title: "Quiere detener la ejecución",
+      text: "¿Detener?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: "Sí,detener",
+      cancelButtonText: "Cancelar",
+  })
+  .then(resultado => {
+      if (resultado.value) {
+          // Hicieron click en "Sí"
+          location.reload();
+          
+      } else {
+          // Dijeron que no
+          console.log("NO se elimina la venta");
+      }
+  });
+  
 
+}
+function clearFileInput(ctrl) {
+  try {
+    ctrl.value = null;
+  } catch(ex) { }
+  if (ctrl.value) {
+    ctrl.parentNode.replaceChild(ctrl.cloneNode(true), ctrl);
+  }
+}
