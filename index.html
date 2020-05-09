@@ -174,7 +174,7 @@
                     <div class="col">
                         <div class="input-group mb-3">
                             <input id="Word" type="text" class="form-control" placeholder="Ingrese la palabra"
-                                aria-label="Word" aria-describedby="button-addon2">
+                                aria-label="Word" aria-describedby="button-addon2" onblur="this.focus()" autofocus >
                             <div class="input-group-append">
                                 <button class="btn btn-secondary" type="button" id="Load"
                                     onclick="loadword();">Cargar</button>
@@ -185,9 +185,8 @@
                         <div class="btn-group control-buttons" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-secondary play" onclick="run();"><i
                                     class="fas fa-play"></i></button>
-                            <button type="button" class="btn btn-secondary pause"><i class="fas fa-pause"></i></button>
-                            <button type="button" class="btn btn-secondary stop" onclick="refresh();"><i
-                                    class="fas fa-stop"></i></button>
+                            <button type="button" class="btn btn-secondary pause"onclick="pausar();"><i class="fas fa-pause"></i></button>
+                            <button type="button" class="btn btn-secondary stop" onclick="refresk();"><i class="fas fa-stop"></i></button>
                         </div>
                     </div>
                     <div class="col pt-2">

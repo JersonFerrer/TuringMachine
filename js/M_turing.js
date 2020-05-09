@@ -61,7 +61,7 @@ function move_right(cont) {
 }
 
 function run() {
-
+  let intervalo;
   var word = document.getElementById("Word").value;
 
   /*declaración de variables que operan en la máquina de turing y sus movimientos, n es el encargado de moverse
@@ -189,8 +189,13 @@ function run() {
       //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
     }).then((result) => {
       if (result.value) {
-        window.location.href = "index.html";
+       Swal.close("salir");
+       document.getElementById("Word").focus();
       }
     });
   }
+}
+function pausar() {
+  window.alert("Se ha pausado la ejecución, pulse ok para continuar");
+
 }
