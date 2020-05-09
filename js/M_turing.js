@@ -5,8 +5,6 @@ String.prototype.replaceAt = function (index, replacement) {
 }
 
 let cuadro = document.getElementById('cuadro');
-//var pasos = document.getElementById ('pasos');
-//var estado = document.getElementById ('estado');
 var palabra = document.getElementById("Word").value;
 
 ind_estado = 0;
@@ -14,8 +12,6 @@ ind_estado = 0;
 //velocidad de cambio
 
 function move_left(cont) {
-
-  console.log(parseInt(slider.noUiSlider.get(), 10));
 
   $(".item").animate({ "left": "+=50px" }, parseInt(slider.noUiSlider.get(), 10));
 
@@ -28,15 +24,10 @@ function move_left(cont) {
   $("#pasos").fadeIn(function () {
     $(this).html("Pasos: " + (cont + 1)).fadeIn();
   });
-
-
-
 }
 
 
 function move_right(cont) {
-
-  console.log(parseInt(slider.noUiSlider.get(), 10));
 
   $(".item").animate({ "left": "-=50px" }, parseInt(slider.noUiSlider.get(), 10));
 
@@ -88,7 +79,7 @@ function run() {
         if (word.charAt(n) == "a") {
 
           $("#cuadro" + posicion).fadeIn(function () {
-            $(this).html("<h1>A</h1>").fadeIn();
+            $(this).html("<h1>a</h1>").fadeIn();
           });
 
           word = word.replaceAt(n, "a");
@@ -103,7 +94,7 @@ function run() {
 
 
           $("#cuadro" + posicion).fadeIn(function () {
-            $(this).html("<h1>A</h1>").fadeIn();
+            $(this).html("<h1>a</h1>").fadeIn();
           });
 
           word = word.replaceAt(n, "a");
