@@ -191,6 +191,7 @@ function run() {
       if (result.value) {
        Swal.close("salir");
        document.getElementById("Word").focus();
+       
       }
     });
   }

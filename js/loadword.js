@@ -31,8 +31,7 @@ function loadword(){
                       clearFileInput(document.getElementById("Word"));
                       document.getElementById("Word").focus();
                       Swal.close("salir");
-                      
-                    }
+                      }
                   });
                 break;
             }
@@ -49,7 +48,6 @@ function loadword(){
             if (result.value) {
                 document.getElementById("Word").focus();
               Swal.close("salir");
-              
             }
           });
     }
@@ -77,7 +75,7 @@ function refresk(){
           
       } else {
           // Dijeron que no
-          console.log("*NO se elimina la venta*");
+          console.log("NO se elimina la venta");
       }
   });
   
