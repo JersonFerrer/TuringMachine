@@ -20,19 +20,39 @@ function loadword(){
                 cont++;
             }else{
                 borrador();
-                window.location.href = "error.html";
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'La palabra cargada no es valida',
+                    confirmButtonText: 'Aceptar',
+                    //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
+                  }).then((result) => {
+                    if (result.value) {
+                      window.location.href = "index.html";
+                    }
+                  });
                 break;
             }
         }
     }
     else{
-        window.location.href = "error.html";
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No ingresó ninguna palabra',
+            confirmButtonText: 'Aceptar',
+            //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
+          }).then((result) => {
+            if (result.value) {
+              window.location.href = "index.html";
+            }
+          });
     }
 }
 function borrador() {
     var items = document.getElementsByClassName('item'); 
     for(i=0;i<=100; i++){
         items[i].innerHTML = "";   
-        }       
+    }
 }
 

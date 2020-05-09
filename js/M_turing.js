@@ -39,7 +39,7 @@ function move_right(cont) {
   console.log(parseInt(slider.noUiSlider.get(), 10));
 
   $(".item").animate({ "left": "-=50px" }, parseInt(slider.noUiSlider.get(), 10));
-  
+
   if (ind_estado == 3) {
     $("#estado").animate({ "left": "+=0px" }, parseInt(slider.noUiSlider.get(), 10));
     $("#estado").fadeIn(function () {
@@ -86,7 +86,7 @@ function run() {
         ind_estado = 1;
 
         if (word.charAt(n) == "a") {
-          
+
           $("#cuadro" + posicion).fadeIn(function () {
             $(this).html("<h1>A</h1>").fadeIn();
           });
@@ -98,7 +98,7 @@ function run() {
           cont++;
           right++;
           posicion++;
-          
+
         } else if (word.charAt(n) == "b") {
 
 
@@ -181,6 +181,16 @@ function run() {
     }
 
   } else {
-    alert("No puedes jugar si está vacía la expresión");
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No puede jugar sin ninguna palabra cargada',
+      confirmButtonText: 'Aceptar',
+      //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
+    }).then((result) => {
+      if (result.value) {
+        window.location.href = "index.html";
+      }
+    });
   }
 }
