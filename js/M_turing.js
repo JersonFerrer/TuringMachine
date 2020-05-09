@@ -63,6 +63,8 @@ function move_right(cont) {
 function run() {
   let intervalo;
   var word = document.getElementById("Word").value;
+  document.getElementById("btnp").disabled = false;
+  document.getElementById("btns").disabled = false;
 
   /*declaración de variables que operan en la máquina de turing y sus movimientos, n es el encargado de moverse
   dentro del String*/
