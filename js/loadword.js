@@ -52,7 +52,7 @@ function loadword(){
 function borrador() {
     var items = document.getElementsByClassName('item'); 
     for(i=0;i<=100; i++){
-        items[i].innerHTML = "";   
+        items[i].innerHTML = "";
     }
 }
 
