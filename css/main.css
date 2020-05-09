@@ -26,3 +26,21 @@
 .wrap {
     margin: 0;
 }
+#pasos{
+    font-weight: 600;
+    font-size: xx-large;
+    font-weight: bold;
+}
+#pasosp{
+    font-size: xx-large;
+    font-weight: bold;
+}
+#estado{
+    font-weight: 600;
+    font-size: xx-large;
+    font-weight: bold;
+}
+#pasose{
+    font-size: xx-large;
+    font-weight: bold;
+}
