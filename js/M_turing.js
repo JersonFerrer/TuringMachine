@@ -11,7 +11,7 @@ var palabra = document.getElementById("Word").value;
 
 ind_estado = 0;
 
-//velocidad de cambio
+                       
 
 function move_left(cont) {
 

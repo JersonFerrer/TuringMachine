@@ -20,6 +20,7 @@ function loadword(){
                 cont++;
             }else{
                 borrador();
+<<<<<<< HEAD
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -33,11 +34,26 @@ function loadword(){
                       Swal.close("salir");
                       }
                   });
+=======
+               // window.location.href = "error.html";
+               Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'datos ingresados incorrectamente',
+                confirmButtonText: 'Aceptar',
+                //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
+              }).then((result) => {
+  if (result.value) {
+    window.location.href="index.html";
+  }
+})
+>>>>>>> 67649d255cb054ada6f2b14ea2a6b325177720a6
                 break;
             }
         }
     }
     else{
+<<<<<<< HEAD
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -50,6 +66,20 @@ function loadword(){
               Swal.close("salir");
             }
           });
+=======
+       // window.location.href = "error.html";
+       Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Esta vacio! vuelva e ingrese de nuevo la palabra',
+        confirmButtonText: 'Aceptar',
+        //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
+      }).then((result) => {
+if (result.value) {
+window.location.href="index.html";
+}
+})
+>>>>>>> 67649d255cb054ada6f2b14ea2a6b325177720a6
     }
 }
 function borrador() {
