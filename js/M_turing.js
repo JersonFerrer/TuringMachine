@@ -189,9 +189,7 @@ function run() {
       //footer: '<a href="../../vista/pagina/login.php">Why do I have this issue?</a>'
     }).then((result) => {
       if (result.value) {
-       Swal.close("salir");
-       document.getElementById("Word").focus();
-       
+        Swal.close("salir");        
       }
     });
   }
