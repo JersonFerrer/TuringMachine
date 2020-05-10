@@ -5,17 +5,11 @@ String.prototype.replaceAt = function (index, replacement) {
 }
 
 let cuadro = document.getElementById('cuadro');
-//var pasos = document.getElementById ('pasos');
-//var estado = document.getElementById ('estado');
 var palabra = document.getElementById("Word").value;
 
 ind_estado = 0;
 
-                       
-
 function move_left(cont) {
-
-  console.log(parseInt(slider.noUiSlider.get(), 10));
 
   $(".item").animate({ "left": "+=50px" }, parseInt(slider.noUiSlider.get(), 10));
 
@@ -28,15 +22,10 @@ function move_left(cont) {
   $("#pasos").fadeIn(function () {
     $(this).html("Pasos: " + (cont + 1)).fadeIn();
   });
-
-
-
 }
 
 
 function move_right(cont) {
-
-  console.log(parseInt(slider.noUiSlider.get(), 10));
 
   $(".item").animate({ "left": "-=50px" }, parseInt(slider.noUiSlider.get(), 10));
 
