@@ -6,7 +6,6 @@ jQuery(function($){
 	// -------------------------------------------------------------
 	(function () {
 		var $frame = $('#forcecentered');
-		var $wrap  = $frame.parent();
 
 		// Call Sly on frame
 		$frame.sly({
@@ -19,7 +18,6 @@ jQuery(function($){
 			touchDragging: 0,
 			releaseSwing: 1,
 			startAt: 10,
-			scrollBar: $wrap.find('.scrollbar'),
 			scrollBy: 1,
 			speed: 300,
 			elasticBounds: 1,
