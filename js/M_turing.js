@@ -9,8 +9,6 @@ var palabra = document.getElementById("Word").value;
 
 ind_estado = 0;
 
-                       
-
 function move_left(cont) {
 
   $(".item").animate({ "left": "+=50px" }, parseInt(slider.noUiSlider.get(), 10));

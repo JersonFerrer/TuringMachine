@@ -7,7 +7,6 @@ jQuery(function($){
 	(function () {
 		var $frame = $('#forcecentered');
 		var $wrap  = $frame.parent();
-		var $controls = $('.control-buttons')
 
 		// Call Sly on frame
 		$frame.sly({
@@ -16,8 +15,8 @@ jQuery(function($){
 			smart: 1,
 			activateMiddle: 1,
 			activateOn: 'click',
-			mouseDragging: 1,
-			touchDragging: 1,
+			mouseDragging: 0,
+			touchDragging: 0,
 			releaseSwing: 1,
 			startAt: 10,
 			scrollBar: $wrap.find('.scrollbar'),
@@ -27,11 +26,7 @@ jQuery(function($){
 			easing: 'easeOutExpo',
 			dragHandle: 1,
 			dynamicHandle: 1,
-			clickBar: 1,
-
-			// Buttons
-			prev: $wrap.find('.prev'),
-			next: $wrap.find('.next')
+			clickBar: 1
 		});
 	}());
 });
