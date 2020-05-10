@@ -15,7 +15,7 @@ body { background: #e8e8e8; }
 }
 .scroll {
 	list-style: none;
-	margin: 0;
+	margin-left: -102px;
 	padding: 0;
 	height: 50px;
 	font-size: 25px;
@@ -35,7 +35,7 @@ body { background: #e8e8e8; }
 	position:relative;
 }
 .item.active {
-	color: #8401fb;
+	color: #333;
 	background: #fff;
 }
 .item:empty {
