@@ -18,12 +18,14 @@ function loadword(){
         $("#cuadro" + resaltar).fadeIn(function () {
             $(this).css("backgroundColor", "#951197 ");
         });
+
         for(i=0; i<word.length; i++){
             if(word.charAt(i)=="a" || word.charAt(i)=="b"){
                 $(items[cont+1]).html("<h1>"+word[i]+"</h1>");
                 cont++;
             }else{
                 borrador();
+
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -68,7 +70,6 @@ function loadword(){
               Swal.close("salir");
             }
           });
-
        // window.location.href = "error.html";
        Swal.fire({
         icon: 'error',
