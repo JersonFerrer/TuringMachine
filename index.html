@@ -44,10 +44,10 @@
             <div class="card-body">
                 <div class="row pt-3">
                     <div class="col" id="pasos">
-                        <p class="p-0 m-0">Pasos: 0</p>
+                        <p class="p-0 m-0" id="pasosp">Pasos: 0</p>
                     </div>
                     <div class="col" id="estado">
-                        <p class="p-0 m-0">Estado: Ninguno</p>
+                        <p class="p-0 m-0" id="pasose">Estado: Ninguno</p>
                     </div>
                     <div class="col">
                         <p class="p-0 m-0"></p>
@@ -185,9 +185,8 @@
                         <div class="btn-group control-buttons" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-secondary play" onclick="run();"><i
                                     class="fas fa-play"></i></button>
-                            <button type="button" class="btn btn-secondary pause"onclick="pausar();"><i class="fas fa-pause"></i></button>
-                            <button type="button" class="btn btn-secondary stop" onclick="refresk();"><i class="fas fa-stop"></i></button>
-                            
+                            <button id="btnp" type="button" disabled="true" class="btn btn-secondary pause"onclick="pausar();"><i class="fas fa-pause"></i></button>
+                            <button id="btns" type="button" disabled="true" class="btn btn-secondary stop" onclick="refresk();"><i class="fas fa-stop"></i></button>
                         </div>
                     </div>
                     <div class="col pt-2">
@@ -256,6 +255,7 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/nouislider.js"></script>
     <script src="js/vendor/plugins.js"></script>
+
     <script src="js/sly/sly.min.js"></script>
     <script src="js/horizontal.js"></script>
     <script src="js/nouisliderinit.js"></script>
@@ -265,6 +265,13 @@
 
     <!--_________________________________________________________________-->
     <!-- FUNCION para cargar la palabra en la scroll-->
+
+	<script src="js/sly/sly.min.js"></script>
+    <script src="js/horizontal.js"></script>
+    <script src="js/nouisliderinit.js"></script>
+     <!--_________________________________________________________________-->
+     <!-- FUNCION para cargar la palabra en la scroll-->
+
     <script src="js/loadword.js"></script>
     <!--Funcion para ejecutar la maquina-->
     <script src="js/M_turing.js"></script>

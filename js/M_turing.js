@@ -9,7 +9,7 @@ var palabra = document.getElementById("Word").value;
 
 ind_estado = 0;
 
-//velocidad de cambio
+                       
 
 function move_left(cont) {
 
@@ -48,12 +48,34 @@ function move_right(cont) {
     $(this).html("Pasos: " + (cont + 1)).fadeIn();
   });
 
-
 }
+
+function paint(estado,a,b){
+
+  if(estado == 1 || estado == 3){
+
+       $(a).fadeIn(function () {
+         $(this).css("backgroundColor", "#951197 ");
+       });
+       $(b).fadeIn(function () {
+         $(this).css("backgroundColor", "#333 ");
+       });
+  }else if(estado== 2){
+    $(a).fadeIn(function () {
+      $(this).css("backgroundColor", "#951197");
+    });
+    $(b).fadeIn(function () {
+      $(this).css("backgroundColor", "#333 ");
+    });
+  }
+}
+
 
 function run() {
   let intervalo;
   var word = document.getElementById("Word").value;
+  document.getElementById("btnp").disabled = false;
+  document.getElementById("btns").disabled = false;
 
   /*declaración de variables que operan en la máquina de turing y sus movimientos, n es el encargado de moverse
   dentro del String*/
@@ -64,10 +86,9 @@ function run() {
   sw = 1;
 
   //Variables de Movimiento
-  posicion = 10;
+  posicion = 12;
   cont = 0;
-
-  //Ciclo que controla todo el movimiento y finaliza en el estado de aceptación//
+//Condicion que controla todo el ciclo de el movimiento y finaliza en el estado de aceptación//
   if (word != "") {
     word = 'z' + word + 'z';
     while (estado != 3) {
@@ -84,6 +105,10 @@ function run() {
 
           word = word.replaceAt(n, "a");
 
+          id1 ="#cuadro"+(posicion+1);
+          id2 ="#cuadro"+(posicion);
+          paint(ind_estado,id1,id2);
+
           move_right(cont);
 
           cont++;
@@ -96,6 +121,10 @@ function run() {
           $("#cuadro" + posicion).fadeIn(function () {
             $(this).html("<h1>a</h1>").fadeIn();
           });
+
+          id1 ="#cuadro"+(posicion+1);
+          id2 ="#cuadro"+(posicion);
+          paint(ind_estado,id1,id2);
 
           word = word.replaceAt(n, "a");
 
@@ -112,6 +141,11 @@ function run() {
           $("#cuadro" + posicion).fadeIn(function () {
             $(this).html("<h1></h1>").fadeIn();
           });
+
+          id1 ="#cuadro"+(posicion-1);
+          id2 ="#cuadro"+(posicion);
+          paint(ind_estado,id1,id2);
+
 
           move_left(cont);
 
@@ -130,6 +164,11 @@ function run() {
 
       }
 
+      id1 ="#cuadro"+(posicion);
+      $(id1).fadeIn(function () {
+        $(this).css("backgroundColor", "#333 ");
+      });
+
       sw = 1;
       posicion--;
       //________________Controla el estado Q2 y sus movimientos__________*/
@@ -137,11 +176,17 @@ function run() {
 
         if (word.charAt(n) == "a") {
 
+          ind_estado = 2;
+
           word = word.replaceAt(n, "a");
 
           $("#cuadro" + posicion).fadeIn(function () {
             $(this).html("<h1>a</h1>").fadeIn();
           });
+
+          id1 ="#cuadro"+(posicion-1);
+          id2 ="#cuadro"+posicion;
+          paint(ind_estado,id1,id2);
 
           left++;
           posicion--;
@@ -153,6 +198,11 @@ function run() {
           ind_estado = 3;
 
           word = word.replaceAt(n, "a");
+
+          id1 ="#cuadro"+(posicion+1);
+          id2 ="#cuadro"+posicion;
+          paint(ind_estado,id1,id2);
+
           estado = 3;
           right++;
           n++;
